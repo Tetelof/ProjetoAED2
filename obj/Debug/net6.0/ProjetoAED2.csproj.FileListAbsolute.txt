@@ -1,0 +1,15 @@
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\bin\Debug\net6.0\ProjetoAED2.exe
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\bin\Debug\net6.0\ProjetoAED2.deps.json
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\bin\Debug\net6.0\ProjetoAED2.runtimeconfig.json
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\bin\Debug\net6.0\ProjetoAED2.dll
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\bin\Debug\net6.0\ref\ProjetoAED2.dll
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\bin\Debug\net6.0\ProjetoAED2.pdb
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\obj\Debug\net6.0\ProjetoAED2.csproj.AssemblyReference.cache
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\obj\Debug\net6.0\ProjetoAED2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\obj\Debug\net6.0\ProjetoAED2.AssemblyInfoInputs.cache
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\obj\Debug\net6.0\ProjetoAED2.AssemblyInfo.cs
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\obj\Debug\net6.0\ProjetoAED2.csproj.CoreCompileInputs.cache
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\obj\Debug\net6.0\ProjetoAED2.dll
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\obj\Debug\net6.0\ref\ProjetoAED2.dll
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\obj\Debug\net6.0\ProjetoAED2.pdb
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\obj\Debug\net6.0\ProjetoAED2.genruntimeconfig.cache
