@@ -1,0 +1,13 @@
+C:\Faculdade\TrabalhoN1\bin\Debug\netcoreapp3.1\TrabalhoN1.exe
+C:\Faculdade\TrabalhoN1\bin\Debug\netcoreapp3.1\TrabalhoN1.deps.json
+C:\Faculdade\TrabalhoN1\bin\Debug\netcoreapp3.1\TrabalhoN1.runtimeconfig.json
+C:\Faculdade\TrabalhoN1\bin\Debug\netcoreapp3.1\TrabalhoN1.runtimeconfig.dev.json
+C:\Faculdade\TrabalhoN1\bin\Debug\netcoreapp3.1\TrabalhoN1.dll
+C:\Faculdade\TrabalhoN1\bin\Debug\netcoreapp3.1\TrabalhoN1.pdb
+C:\Faculdade\TrabalhoN1\obj\Debug\netcoreapp3.1\TrabalhoN1.csprojAssemblyReference.cache
+C:\Faculdade\TrabalhoN1\obj\Debug\netcoreapp3.1\TrabalhoN1.AssemblyInfoInputs.cache
+C:\Faculdade\TrabalhoN1\obj\Debug\netcoreapp3.1\TrabalhoN1.AssemblyInfo.cs
+C:\Faculdade\TrabalhoN1\obj\Debug\netcoreapp3.1\TrabalhoN1.csproj.CoreCompileInputs.cache
+C:\Faculdade\TrabalhoN1\obj\Debug\netcoreapp3.1\TrabalhoN1.dll
+C:\Faculdade\TrabalhoN1\obj\Debug\netcoreapp3.1\TrabalhoN1.pdb
+C:\Faculdade\TrabalhoN1\obj\Debug\netcoreapp3.1\TrabalhoN1.genruntimeconfig.cache

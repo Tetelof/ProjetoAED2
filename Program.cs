@@ -8,6 +8,7 @@ namespace TrabalhoN1
         static void Main(string[] args)
         {
             Corpo corpoCeleste = new Corpo();
+            Console.WriteLine("vrau");
         }
     }
 }
