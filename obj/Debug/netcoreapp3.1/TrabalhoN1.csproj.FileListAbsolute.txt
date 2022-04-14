@@ -11,3 +11,17 @@ C:\Faculdade\TrabalhoN1\obj\Debug\netcoreapp3.1\TrabalhoN1.csproj.CoreCompileInp
 C:\Faculdade\TrabalhoN1\obj\Debug\netcoreapp3.1\TrabalhoN1.dll
 C:\Faculdade\TrabalhoN1\obj\Debug\netcoreapp3.1\TrabalhoN1.pdb
 C:\Faculdade\TrabalhoN1\obj\Debug\netcoreapp3.1\TrabalhoN1.genruntimeconfig.cache
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\bin\Debug\netcoreapp3.1\TrabalhoN1.exe
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\bin\Debug\netcoreapp3.1\TrabalhoN1.deps.json
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\bin\Debug\netcoreapp3.1\TrabalhoN1.runtimeconfig.json
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\bin\Debug\netcoreapp3.1\TrabalhoN1.runtimeconfig.dev.json
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\bin\Debug\netcoreapp3.1\TrabalhoN1.dll
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\bin\Debug\netcoreapp3.1\TrabalhoN1.pdb
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\obj\Debug\netcoreapp3.1\TrabalhoN1.csproj.AssemblyReference.cache
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\obj\Debug\netcoreapp3.1\TrabalhoN1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\obj\Debug\netcoreapp3.1\TrabalhoN1.AssemblyInfoInputs.cache
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\obj\Debug\netcoreapp3.1\TrabalhoN1.AssemblyInfo.cs
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\obj\Debug\netcoreapp3.1\TrabalhoN1.csproj.CoreCompileInputs.cache
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\obj\Debug\netcoreapp3.1\TrabalhoN1.dll
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\obj\Debug\netcoreapp3.1\TrabalhoN1.pdb
+C:\Users\Danniel\Documents\Projetos e programas\C#\ProjetoAED2\obj\Debug\netcoreapp3.1\TrabalhoN1.genruntimeconfig.cache

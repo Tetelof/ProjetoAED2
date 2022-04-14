@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "yTAsIyqnWIEv3NQuc/Fp19RP0dOpPRJIDWXw2EKnBZrraI5083rr3wJs5NPBEeV4kMErIXXagJiM4sbuz7DPew==",
+  "dgSpecHash": "vgmEEDcxfdT5sPqMhV0f2q8fonZ+3E3FlDX1LF+BkFHhHGrSyoQehO+9KJXtInDC2OQWDXTzoryB6ndIbCLx5w==",
   "success": true,
-  "projectFilePath": "C:\\Faculdade\\TrabalhoN1\\TrabalhoN1.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Danniel\\Documents\\Projetos e programas\\C#\\ProjetoAED2\\TrabalhoN1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Danniel\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512"
+  ],
   "logs": []
 }
