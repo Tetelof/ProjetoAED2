@@ -43,6 +43,7 @@ namespace TrabalhoN1.Classes
         }
         public void Velocidade(Corpo[] CorposCelestes, double tempo)
         {
+            // nao esta completo
             double[] velXArray = new double[CorposCelestes.Length];
             double[] velYArray = new double[CorposCelestes.Length];
 
@@ -52,14 +53,20 @@ namespace TrabalhoN1.Classes
                 if (corpoVizinho != this)
                 {
                     double at = Aceleracao(Forca(corpoVizinho)) * tempo;
-                    velXArray[count] = VelX * at;
+                    velXArray[count] = VelX * at; // precisa calcular o angulo da aceleração, pois nao vai ser igual para x e y
                     velYArray[count] = VelY * at;
                     count++;
                 }
             }
 
-            this.VelX = velXArray.Average();
-            this.VelY = velYArray.Average();
+            this.VelX = this.VelX + velXArray.Average();
+            this.VelY = this.VelY + velYArray.Average();
+        }
+        public void CalcularPosicao()
+        {
+            // x = r Cos theta
+            // y = r Sin theta
+            // r^2 = x^2 + y^2
         }
     }
 }
