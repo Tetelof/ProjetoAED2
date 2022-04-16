@@ -12,6 +12,10 @@ namespace TrabalhoN1
             StreamReader sr = new StreamReader("Arquivos/inicialTrabalho.uni");
             string linha = sr.ReadLine() ?? "";
             string[] cabecalho = linha.Split(";");
+
+            Universo universo = new Universo();
+            universo.Tempo = double.Parse(cabecalho[2]);
+
             Corpo[] CorposCelestes = new Corpo[int.Parse(cabecalho[0])];
 
             int count = 0;
@@ -34,11 +38,6 @@ namespace TrabalhoN1
             sr.Close();
 
             Console.WriteLine("vrau");
-
-            StreamReader dr = new StreamReader("");
-            string linha1 = dr.ReadLine();
-            dr.Close();
-            string[] cabes = linha1.Split(";");
             
         }
     }
