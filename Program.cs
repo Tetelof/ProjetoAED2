@@ -37,7 +37,10 @@ namespace TrabalhoN1
             }
             sr.Close();
 
-            Console.WriteLine("vrau");
+            for (int i = 0; i < int.Parse(cabecalho[1]); i++)
+            {
+                universo.CalcularIteracao(CorposCelestes);
+            }
             
         }
     }
