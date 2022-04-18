@@ -67,10 +67,10 @@ namespace TrabalhoN1.Classes
                     // a = f * t
                     
                     double Fx = Forca(corpoVizinho) * Math.Cos(Angulo(corpoVizinho));
-                    double Fy = Forca(corpoVizinho) * Math.Cos(Angulo(corpoVizinho));
+                    double Fy = Forca(corpoVizinho) * Math.Sin(Angulo(corpoVizinho));
 
-                    velXArray[count] = VelX * Aceleracao(Fx) * tempo;
-                    velYArray[count] = VelY * Aceleracao(Fy) * tempo;
+                    velXArray[count] = VelX + Aceleracao(Fx) * tempo;
+                    velYArray[count] = VelY + Aceleracao(Fy) * tempo;
 
                     count++;
                 }

@@ -19,7 +19,7 @@ namespace TrabalhoN1
             Corpo[] CorposCelestes = new Corpo[int.Parse(cabecalho[0])];
 
             int count = 0;
-            while(sr.EndOfStream)
+            while(!sr.EndOfStream)
             {
                 linha = sr.ReadLine();
                 string[] parametros = linha.Split(";");
@@ -36,12 +36,15 @@ namespace TrabalhoN1
                 count++;
             }
             sr.Close();
-
+            
+            StreamWriter sw = new StreamWriter("Arquivos/saida.uni");
             for (int i = 0; i < int.Parse(cabecalho[1]); i++)
             {
                 universo.CalcularIteracao(CorposCelestes);
+                sw.WriteLine(universo.LogIteracao(CorposCelestes));
+                sw.WriteLine("--------");
             }
-            
+            sw.Close();
         }
     }
 }
