@@ -41,32 +41,48 @@ namespace TrabalhoN1.Classes
             return f;
 
         }
+        public double Angulo(Corpo corpoVizinho)
+        {
+            double angulo = 0;
+            double x2 = corpoVizinho.PosX;
+            // theta = ACos((x1-x2)/Hipotenusa)
+            // hipotenusa = Distancia()
+            double anguloRadiano = Math.Acos((this.PosX-x2)/Distancia(corpoVizinho)); // Math.Acos() retorna angulo em radianos
+            angulo = anguloRadiano * 180 / Math.PI; // transformando de radianos para graus
+
+            return angulo;
+        }
         public void Velocidade(Corpo[] CorposCelestes, double tempo)
         {
             // nao esta completo
-            double[] velXArray = new double[CorposCelestes.Length];
-            double[] velYArray = new double[CorposCelestes.Length];
+            double[] velXArray = new double[CorposCelestes.Length-1];
+            double[] velYArray = new double[CorposCelestes.Length-1];
 
             foreach (Corpo corpoVizinho in CorposCelestes)
             {
                 int count = 0;
                 if (corpoVizinho != this)
                 {
-                    double at = Aceleracao(Forca(corpoVizinho)) * tempo;
-                    velXArray[count] = VelX * at; // precisa calcular o angulo da aceleração, pois nao vai ser igual para x e y
-                    velYArray[count] = VelY * at;
+                    // V = v0 * a * t
+                    // a = f * t
+                    
+                    double Fx = Forca(corpoVizinho) * Math.Cos(Angulo(corpoVizinho));
+                    double Fy = Forca(corpoVizinho) * Math.Cos(Angulo(corpoVizinho));
+
+                    velXArray[count] = VelX * Aceleracao(Fx) * tempo;
+                    velYArray[count] = VelY * Aceleracao(Fy) * tempo;
+
                     count++;
                 }
             }
 
-            this.VelX = this.VelX + velXArray.Average();
-            this.VelY = this.VelY + velYArray.Average();
+            this.VelX = this.VelX + velXArray.Sum();
+            this.VelY = this.VelY + velYArray.Sum();
         }
-        public void CalcularPosicao()
+        public void CalcularPosicao(double Tempo)
         {
-            // x = r Cos theta
-            // y = r Sin theta
-            // r^2 = x^2 + y^2
+            PosX = PosX + VelX * Tempo;
+            PosY = PosY + VelY * Tempo;
         }
     }
 }

@@ -11,6 +11,7 @@ namespace TrabalhoN1.Classes
             for (int i = 1; i < CorposCelestes.Length; i++)
             {
                 CorposCelestes[i].Velocidade(CorposCelestes, Tempo);
+                CorposCelestes[i].CalcularPosicao(Tempo);
             }
         }
     }
