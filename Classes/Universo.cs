@@ -16,6 +16,9 @@ namespace TrabalhoN1.Classes
                         CalculaForcas(CorposCelestes[i],CorposCelestes[j]);
                     }
                 }
+            }
+            for (int i = 0; i < CorposCelestes.Length; i++)
+            {
                 CalcularPosicao(CorposCelestes[i]);
                 CalcularVelocidade(CorposCelestes[i]);
             }
@@ -32,11 +35,11 @@ namespace TrabalhoN1.Classes
         {
             double G = 6.674184 * Math.Pow(10,-11);
             double Forca = 0;
-            double distancia =  CalculaDistancia(corpo1, corpo2);
+            double distancia =  CalculaDistancia(corpo1, corpo2); //572.7704601321545
             Forca = G*(corpo1.Massa*corpo2.Massa)/Math.Pow(distancia,2); //6.074056279975799E-06
             
-            corpo1.ForcaX += Forca * (corpo1.PosX - corpo2.PosX) / distancia; //6.055281089506516E-06
-            corpo1.ForcaY += Forca * (corpo1.PosY - corpo2.PosY) / distancia; //-4.772112942693402E-07
+            corpo1.ForcaX += Forca * (corpo2.PosX - corpo1.PosX) / distancia; //-6.055281089506516E-06
+            corpo1.ForcaY += Forca * (corpo2.PosY - corpo1.PosY) / distancia; //4.772112942693402E-07
         }
         public void CalcularPosicao(Corpo corpo)
         {
@@ -57,13 +60,13 @@ namespace TrabalhoN1.Classes
 
             foreach (Corpo corpo in CorposCelestes)
             {
-                log += Convert.ToString(corpo.Nome)+";"+
-                    Convert.ToString(corpo.Massa)+";"+
-                    Convert.ToString(corpo.Raio)+";"+
-                    Convert.ToString(corpo.PosX)+";"+
-                    Convert.ToString(corpo.PosY)+";"+
-                    Convert.ToString(corpo.VelX)+";"+
-                    Convert.ToString(corpo.VelY)+Environment.NewLine
+                log += "Nome " + Convert.ToString(corpo.Nome)+"; "+
+                    "Massa " + Convert.ToString(Math.Round(corpo.Massa,2))+"; "+
+                    "Raio " + Convert.ToString(Math.Round(corpo.Raio,2))+"; "+
+                    "PosX " + Convert.ToString(Math.Round(corpo.PosX,2))+"; "+
+                    "PosY " + Convert.ToString(Math.Round(corpo.PosY,2))+"; "+
+                    "VelX " + Convert.ToString(Math.Round(corpo.VelX,2))+"; "+
+                    "VelY " + Convert.ToString(Math.Round(corpo.VelY,2))+Environment.NewLine
                 ;
             }
 
