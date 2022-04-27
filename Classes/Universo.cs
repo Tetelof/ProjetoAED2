@@ -17,11 +17,14 @@ namespace TrabalhoN1.Classes
                     }
                 }
             }
-            for (int i = 0; i < CorposCelestes.Length; i++)
+            foreach (Corpo corpo in CorposCelestes)
             {
-                CalcularPosicao(CorposCelestes[i]);
-                CalcularVelocidade(CorposCelestes[i]);
+                CalcularPosicao(corpo);
+                CalcularVelocidade(corpo);
+                corpo.ForcaX = 0;
+                corpo.ForcaY = 0;
             }
+            
         }
         private double CalculaDistancia(Corpo corpo1, Corpo corpo2)
         {
@@ -36,17 +39,19 @@ namespace TrabalhoN1.Classes
             double G = 6.674184 * Math.Pow(10,-11);
             double Forca = 0;
             double distancia =  CalculaDistancia(corpo1, corpo2); //572.7704601321545
-            Forca = G*(corpo1.Massa*corpo2.Massa)/Math.Pow(distancia,2); //6.074056279975799E-06
+            Forca = G*(corpo1.Massa*corpo2.Massa)/Math.Pow(distancia,2); //0.000010001
             
-            corpo1.ForcaX += Forca * (corpo2.PosX - corpo1.PosX) / distancia; //-6.055281089506516E-06
+            corpo1.ForcaX += Forca * (corpo2.PosX - corpo1.PosX) / distancia; //-0.996911498
             corpo1.ForcaY += Forca * (corpo2.PosY - corpo1.PosY) / distancia; //4.772112942693402E-07
         }
         public void CalcularPosicao(Corpo corpo)
         {
             double ax = (corpo.ForcaX * corpo.Massa);
+            double posx = (corpo.VelX * Tempo) + (((corpo.ForcaX / corpo.Massa)/2) * (Tempo*Tempo)); //109.67+ (-1.62149) * 100
+            double posy = (corpo.VelY * Tempo) + (((corpo.ForcaY / corpo.Massa)/2) * (Tempo*Tempo));
 
-            corpo.PosX += (corpo.VelX * Tempo) + ((corpo.ForcaX * corpo.Massa)/2) * (Tempo*Tempo); //1264.39165689528285
-            corpo.PosY += (corpo.VelY * Tempo) + ((corpo.ForcaY * corpo.Massa)/2) * (Tempo*Tempo); //391.2458414005469
+            corpo.PosX = corpo.PosX + posx; //1264.39165689528285
+            corpo.PosY = corpo.PosY + posy; //391.2458414005469
         }
         public void CalcularVelocidade(Corpo corpo)
         {
@@ -71,6 +76,27 @@ namespace TrabalhoN1.Classes
             }
 
             return log;
+        }
+        public void CalculaColisao(Corpo[] corpos)
+        {
+            for (int i = 0; i < corpos.Length; i++)
+            {
+                for (int j = 0; j < corpos.Length; j++)
+                {
+                    if (i != j)
+                    {
+                        if ((corpos[i].PosX + corpos[i].Raio < corpos[j].PosX + corpos[j].Raio)&&(corpos[i].PosY + corpos[i].Raio < corpos[j].PosY + corpos[j].Raio))
+                        {
+                            double memx = corpos[i].VelX;
+                            double memy = corpos[i].VelY;
+                            corpos[i].VelX = corpos[j].VelX;
+                            corpos[i].VelY = corpos[j].VelY;
+                            corpos[j].VelX = memx;
+                            corpos[j].VelY = memy;
+                        }
+                    }
+                }
+            }
         }
     }
 }
