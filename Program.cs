@@ -38,10 +38,11 @@ namespace TrabalhoN1
             sr.Close();
             
             StreamWriter sw = new StreamWriter("Arquivos/saida.uni");
-            for (int i = 0; i < 10000; i++)
+            for (int i = 0; i < int.Parse(cabecalho[1])+1; i++)
             {
+                sw.WriteLine($"Iteração {i}");
                 universo.CalcularIteracao(CorposCelestes);
-                universo.CalculaColisao(CorposCelestes);
+                universo.CalculaColisao(CorposCelestes, sw);
                 sw.WriteLine(universo.LogIteracao(CorposCelestes));
             }
             sw.Close();

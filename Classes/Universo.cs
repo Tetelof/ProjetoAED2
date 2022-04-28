@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 namespace TrabalhoN1.Classes
 {
     public class Universo
@@ -13,16 +14,22 @@ namespace TrabalhoN1.Classes
                 {
                     if (i != j)
                     {
-                        CalculaForcas(CorposCelestes[i],CorposCelestes[j]);
+                        if(CorposCelestes[i] != null && CorposCelestes[j] != null)
+                        {
+                            CalculaForcas(CorposCelestes[i],CorposCelestes[j]);
+                        }
                     }
                 }
             }
             foreach (Corpo corpo in CorposCelestes)
             {
-                CalcularPosicao(corpo);
-                CalcularVelocidade(corpo);
-                corpo.ForcaX = 0;
-                corpo.ForcaY = 0;
+                if (corpo != null)
+                {
+                    CalcularPosicao(corpo);
+                    CalcularVelocidade(corpo);
+                    corpo.ForcaX = 0;
+                    corpo.ForcaY = 0;
+                }
             }
             
         }
@@ -65,19 +72,22 @@ namespace TrabalhoN1.Classes
 
             foreach (Corpo corpo in CorposCelestes)
             {
-                log += "Nome " + Convert.ToString(corpo.Nome)+"; "+
-                    "Massa " + Convert.ToString(Math.Round(corpo.Massa,2))+"; "+
-                    "Raio " + Convert.ToString(Math.Round(corpo.Raio,2))+"; "+
-                    "PosX " + Convert.ToString(Math.Round(corpo.PosX,2))+"; "+
-                    "PosY " + Convert.ToString(Math.Round(corpo.PosY,2))+"; "+
-                    "VelX " + Convert.ToString(Math.Round(corpo.VelX,2))+"; "+
-                    "VelY " + Convert.ToString(Math.Round(corpo.VelY,2))+Environment.NewLine
-                ;
+                if (corpo != null)
+                {
+                    log += "Nome " + Convert.ToString(corpo.Nome)+"; "+
+                        "Massa " + Convert.ToString(Math.Round(corpo.Massa,2))+"; "+
+                        "Raio " + Convert.ToString(Math.Round(corpo.Raio,2))+"; "+
+                        "PosX " + Convert.ToString(Math.Round(corpo.PosX,2))+"; "+
+                        "PosY " + Convert.ToString(Math.Round(corpo.PosY,2))+"; "+
+                        "VelX " + Convert.ToString(Math.Round(corpo.VelX,2))+"; "+
+                        "VelY " + Convert.ToString(Math.Round(corpo.VelY,2))+Environment.NewLine
+                    ;
+                }
             }
 
             return log;
         }
-        public void CalculaColisao(Corpo[] corpos)
+        public void CalculaColisao(Corpo[] corpos,StreamWriter sw)
         {
             for (int i = 0; i < corpos.Length; i++)
             {
@@ -85,14 +95,18 @@ namespace TrabalhoN1.Classes
                 {
                     if (i != j)
                     {
-                        if ((corpos[i].PosX + corpos[i].Raio < corpos[j].PosX + corpos[j].Raio)&&(corpos[i].PosY + corpos[i].Raio < corpos[j].PosY + corpos[j].Raio))
+                        if (corpos[i] != null && corpos[j] != null)
                         {
-                            double memx = corpos[i].VelX;
-                            double memy = corpos[i].VelY;
-                            corpos[i].VelX = corpos[j].VelX;
-                            corpos[i].VelY = corpos[j].VelY;
-                            corpos[j].VelX = memx;
-                            corpos[j].VelY = memy;
+                            if (CalculaDistancia(corpos[i], corpos[j]) < (corpos[i].Raio+corpos[j].Raio))
+                            {
+                                sw.WriteLine(LogIteracao(corpos));
+                                corpos[j].Nome += corpos[i].Nome;
+                                corpos[j].Massa += corpos[i].Massa;
+                                corpos[j].Raio += corpos[i].Raio;
+                                corpos[j].VelX += corpos[i].VelX;
+                                corpos[j].VelY += corpos[i].VelY;
+                                corpos[i] = null;
+                            }
                         }
                     }
                 }
