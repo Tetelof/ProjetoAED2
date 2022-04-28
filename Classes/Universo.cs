@@ -74,13 +74,13 @@ namespace TrabalhoN1.Classes
             {
                 if (corpo != null)
                 {
-                    log += "Nome " + Convert.ToString(corpo.Nome)+"; "+
-                        "Massa " + Convert.ToString(Math.Round(corpo.Massa,2))+"; "+
-                        "Raio " + Convert.ToString(Math.Round(corpo.Raio,2))+"; "+
-                        "PosX " + Convert.ToString(Math.Round(corpo.PosX,2))+"; "+
-                        "PosY " + Convert.ToString(Math.Round(corpo.PosY,2))+"; "+
-                        "VelX " + Convert.ToString(Math.Round(corpo.VelX,2))+"; "+
-                        "VelY " + Convert.ToString(Math.Round(corpo.VelY,2))+Environment.NewLine
+                    log += Convert.ToString(corpo.Nome)+";"+
+                        Convert.ToString(Math.Round(corpo.Massa,2))+";"+
+                        Convert.ToString(Math.Round(corpo.Raio,2))+";"+
+                        Convert.ToString(Math.Round(corpo.PosX,2))+";"+
+                        Convert.ToString(Math.Round(corpo.PosY,2))+";"+
+                        Convert.ToString(Math.Round(corpo.VelX,2))+";"+
+                        Convert.ToString(Math.Round(corpo.VelY,2))// +Environment.NewLine
                     ;
                 }
             }
